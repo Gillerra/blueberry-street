@@ -1,38 +1,274 @@
-.App {
-  text-align: center;
+body {
+  background: #b9a7dd;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+  background: #2d1950;
+  height: 21vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo {
+  display: flex;
+  justify-content: flex-start;
+  margin-right: auto;
+  margin-left: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.link  {
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-shadow: 2px 1px 1px #2d1950;
+    font-size: 28px;
+    padding: 40px;   
+}
+
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  background: #b9a7dd;
+  height: 3vh;
+}
+
+
+h2 {
+  font-family: 'Pacifico', cursive;
+  text-shadow: 1px 1px 1px #2d1950;
+  margin: 0;
+  font-size: 38px;
+  align-self: center;
+}
+
+h3 {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 24px;
+  text-shadow: 3px 3px 3px #2d1950;
+  font-weight: 400;
+}
+
+h4 {
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 18px;
+  text-shadow: 1px 1px 1px #2d1950;
+  margin: 0;
+}
+
+h5 {
+  font-family: 'Roboto', sans-serif;
+  color: #2d1950;
+  font-size: 24px;
+  text-shadow: 3px 3px 3px white;
+  font-weight: 400;
+  align-self: center;
+  margin-left: 200px;
+  margin-right: 80px;
+}
+
+.miniAbout {
+  background: #2d1950;
+  height: 10vh;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+}
+
+.aboutText {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-family: 'Roboto', sans-serif;
   color: white;
+  position: absolute;
+  margin-left: 320px;
 }
 
-.App-link {
-  color: #61dafb;
+.aboutImage {
+  border-radius: 3px;
+  filter: drop-shadow(0 0 5px #2d1950);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.btnSlider {
+  margin-bottom: 15px;
+  border: 3px solid #2d1950;
+  border-radius: 3px;
+  background: linear-gradient(to right, #b9a7dd, #2d1950);
+  padding: 5px 20px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  text-shadow: 2px 1px 1px #2d1950;
+  font-size: 15px;
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 10px;
+  
+}
+
+.btnСatalog {
+  border: 3px solid #2d1950;
+  border-radius: 3px;
+  background: linear-gradient(to right, #b9a7dd, #2d1950);
+  padding: 7px;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  text-shadow: 2px 1px 1px #2d1950;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.btnСatalog:hover, .btnSlider:hover {
+  background: linear-gradient(to right, #2d1950, #b9a7dd);
+}
+
+.btnguide {
+  border: none;
+  background-color: #b9a7dd;
+  font-family: 'Roboto', sans-serif;
+  color: #2f1f4a;
+  font-size: 25px;
+  text-shadow: 3px 3px 3px white;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.btnguide:hover {
+  color: #2d1950;
+  font-size: 27px;
+}
+
+.cont {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+.text {
+  align-self: center;
+}
+
+
+.footer {
+  display: contents;
+  justify-content: center;
+}
+
+.imageFooter {
+  opacity: 0.9;
+  border-radius: 3px;
+  filter: drop-shadow(0 0 5px #2d1950);
+  
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-card {
+  padding: 2%;
+  flex-grow: 1;
+  flex-basis: 16%;
+  border-radius: 3px;
+}
+
+.imageDecoration {
+  border-radius: 3px;
+  filter: drop-shadow(0 0 5px #2d1950);
+}
+
+@media all and (max-width: 800px) {
+
+  nav {
+  width: auto;
   }
-  to {
-    transform: rotate(360deg);
+
+  .mobile {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .link {
+    font-size: 18px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+
+  .aboutImage {
+    width: 450px;
+    margin-top: 50px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  h3, h5 {
+    font-size: 20 px;
+  }
+
+  
+.aboutText {
+  margin-left: 150px;
+  margin-top: 90px;
+}
+
+}
+  
+
+@media all and (max-width: 500px) {
+  nav {
+  width: auto;
+  }
+  
+  .mobile {
+    width: 80px;
+    height: 80px;
+  }
+  
+  
+  .link {
+    font-size: 17px;
+  }
+
+  .text {
+    font-size: 15px;
+  }
+  
+  .aboutImage {
+    width: 400px;
+    margin-top: 50px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  h3, h5 {
+    font-size: 19px;
+  }
+
+  .aboutText {
+    margin-left: 150px;
+    margin-top: 80px;
   }
 }
