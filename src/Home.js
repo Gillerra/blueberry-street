@@ -3,23 +3,20 @@ import { useEffect, useRef } from "react";
 import Slider from "./Slider";
 
 
-
-
 function Home() {
 
-    const pictureAnime = useRef(null);
+    const pictureAnime = useRef();
     useEffect(() => {
     gsap.to(".aboutImage", { y: -25,  
         duration: 4,
-        scale: 1
-        
+        scale: 1     
     });
     }, []);
     
     return (
         <div className="parent">
         <div className="miniAbout">
-        <div className="about">
+        <div className="about" ref={pictureAnime}>
         <Slider/>
         </div>
         </div>

@@ -2,7 +2,7 @@ function Frips({itemForSale}) {
     return(
 <div className="products">
     {itemForSale.map((element => {
-        const {id, names, searchTerm, price, image}=element;
+        const {id, names, price, image}=element;
 
         return (
         <div className="product-card" key={id}>

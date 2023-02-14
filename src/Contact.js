@@ -3,22 +3,12 @@ import image from "./pastil.jpg";
 import { FaTelegramPlane } from 'react-icons/fa';
 import { FaWhatsapp } from 'react-icons/fa';
 import { FaMapMarkerAlt } from 'react-icons/fa';
-import { TextGuide } from "./TextGuide";
 
 
 function Contact() {
 
+    const textGuide = "Если Вам хочется самим научиться готовить пастилу и стрипсы.  Скоро планируется выпуск гайда с доступными и несложными рецептами для дегидратора. Вы сможете самостоятельно приготовить полезные лакомства: пастилу, стрипсы из фруктов и овощей. Смотрите за нашими анонсами в группах в соцсетях.";
     const [deployText, setDeployText] = useState(false);
-
-        return (
-            <div>
-    {TextGuide.map((element => {
-        const {id, text, showMore} = element;
-
-       const deployTextClick = (element) => {
-        element.showMore = !element.showMore
-        setDeployText(!deployText)
-       }
 
     return(
             <div>
@@ -29,9 +19,9 @@ function Contact() {
             <h3 className="text"> <FaTelegramPlane/> Мы в Telegram</h3>
             <h3 className="text"> <FaMapMarkerAlt/> г. Санкт-Петербург</h3>
 
-            <div key={id}>
-            <h5>{deployText ? text : text.substring(0,59) + "..."}
-            <button className="btnguide" onClick={() => deployTextClick(element)}>{showMore ? "Сернуть текст. " : "Читайте здесь."}</button>
+            <div>
+            <h5>{deployText ? textGuide : textGuide.substring(0,59) + "..."}
+            <button className="btnguide" onClick={() => setDeployText(!deployText)}>{deployText ? "Сернуть текст. " : "Читайте здесь."}</button>
             </h5>
             </div>
 
@@ -41,9 +31,6 @@ function Contact() {
         </div>
         </div>   
     )
-}))}
-    </div>
-)
 }
 
 export default Contact;

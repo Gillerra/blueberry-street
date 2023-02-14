@@ -31,14 +31,14 @@ function App() {
       <Link to="contact" className='link'>Контакты</Link>
     </nav>
 
-     <Routes>
+      <Routes>
       <Route path="/" element={ <Home />}/>
       <Route path="catalog" element={ <Catalog />}/>
       <Route path="delivery" element={ <Delivery />}/>
       <Route path="contact" element={ <Contact />}/>
-     </Routes>
+      </Routes>
     
-     </div>
+      </div>
     </Router>
     
   );

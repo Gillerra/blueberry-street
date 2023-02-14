@@ -15,7 +15,7 @@ function Catalog() {
     }
 
     return(
-<div className="cont">
+<div>
 
 <Buttons filteredStrips = {chosenProducts} />
 
